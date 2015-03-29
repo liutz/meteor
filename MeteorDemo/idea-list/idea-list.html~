@@ -1,0 +1,33 @@
+<head>
+  <title>我的第一个meteor程序</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <!--  使用html@hello模板 -->
+  {{> hello}}
+  <!--  使用html@form模板 -->
+　　{{> form}}
+</body>
+
+<!--  html@hello模板定义 -->
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>  
+  <p>Get all ideas</p>
+  <ol>
+  {{#each all_ideas}}
+    <li>
+      {{name}}: {{score}}
+    </li>
+  {{/each}}
+  </ol>
+</template>
+
+<!--  html@form模板定义 -->
+<template name="form">
+  <form>
+    <input type="text">
+    <button name="button">添加 idea</button>
+  </form>
+</template>
